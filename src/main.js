@@ -1,3 +1,4 @@
+'use strict';
 const TASK_COUNT = 3;
 
 const createHeaderTemplate = () => {
@@ -428,7 +429,7 @@ render(taskListElement, createTaskTemplate());
 new Array(TASK_COUNT)
   .fill(``)
   .forEach(
-    () => render(taskListElement, createTaskTemplate())
+      () => render(taskListElement, createTaskTemplate())
   );
 
 const boardElement = siteMainElement.querySelector(`.board`);
