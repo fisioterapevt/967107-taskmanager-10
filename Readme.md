@@ -1,7 +1,7 @@
 # Личный проект «Менеджер задач» [![Build status][travis-image]][travis-url]
 
 * Студент: [Tikhon Izmailov](https://up.htmlacademy.ru/ecmascript/10/user/967107).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Антропов] (https://htmlacademy.ru/profile/id1266727).
 
 ---
 
