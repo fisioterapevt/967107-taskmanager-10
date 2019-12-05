@@ -1,28 +1,4 @@
-import {Colors} from '../utils/const';
-
-const DescriptionItems = [
-  `Изучить теорию`,
-  `Сделать домашку`,
-  `Пройти интенсив на соточку`,
-];
-
-const DefaultRepeatingDays = {
-  'mo': false,
-  'tu': false,
-  'we': false,
-  'th': false,
-  'fr': false,
-  'sa': false,
-  'su': false,
-};
-
-const Tags = [
-  `homework`,
-  `theory`,
-  `practice`,
-  `intensive`,
-  `keks`
-];
+import {Colors, DefaultRepeatingDays, DescriptionItems, Tags} from '../utils/const';
 
 const getRandomArrayItem = (array) => {
   const randomIndex = getRandomIntegerNumber(0, array.length);
@@ -47,6 +23,12 @@ const getRandomDate = () => {
 const generateRepeatingDays = () => {
   return Object.assign({}, DefaultRepeatingDays, {
     'mo': Math.random() > 0.5,
+    'tu': Math.random() > 0.5,
+    'we': Math.random() > 0.5,
+    'th': Math.random() > 0.5,
+    'fr': Math.random() > 0.5,
+    'sa': Math.random() > 0.5,
+    'su': Math.random() > 0.5,
   });
 };
 
@@ -76,4 +58,18 @@ const generateTasks = (count) => {
     .map(generateTask);
 };
 
-export {generateTask, generateTasks};
+const castTimeFormat = (value) => {
+  return value < 10 ? `0${value}` : String(value);
+};
+
+const formatTime = (date) => {
+  const hours = castTimeFormat(date.getHours() % 12);
+  const minutes = castTimeFormat(date.getMinutes());
+
+  const interval = date.getHours() > 11 ? `pm` : `am`;
+
+  return `${hours}:${minutes} ${interval}`;
+};
+
+
+export {generateTask, generateTasks, formatTime};

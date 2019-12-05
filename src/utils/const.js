@@ -17,15 +17,26 @@ export const MonthNames = [
   `December`,
 ];
 
-const castTimeFormat = (value) => {
-  return value < 10 ? `0${value}` : String(value);
+export const DescriptionItems = [
+  `Изучить теорию`,
+  `Сделать домашку`,
+  `Пройти интенсив на соточку`,
+];
+
+export const DefaultRepeatingDays = {
+  'mo': false,
+  'tu': false,
+  'we': false,
+  'th': false,
+  'fr': false,
+  'sa': false,
+  'su': false,
 };
 
-export const formatTime = (date) => {
-  const hours = castTimeFormat(date.getHours() % 12);
-  const minutes = castTimeFormat(date.getMinutes());
-
-  const interval = date.getHours() > 11 ? `pm` : `am`;
-
-  return `${hours}:${minutes} ${interval}`;
-};
+export const Tags = [
+  `homework`,
+  `theory`,
+  `practice`,
+  `intensive`,
+  `keks`
+];
