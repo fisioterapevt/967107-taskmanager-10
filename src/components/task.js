@@ -1,5 +1,5 @@
 import {MonthNames} from '../utils/const';
-import {formatTime} from '../mock/task';
+import {formatTime} from '../utils/format-time';
 
 const createHashtagsMarkup = (hashtags) => {
   return hashtags

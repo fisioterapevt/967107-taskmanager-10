@@ -1,5 +1,5 @@
 import {Colors, Days, MonthNames} from '../utils/const';
-import {formatTime} from '../mock/task';
+import {formatTime} from '../utils/format-time';
 
 const createColorsMarkup = (colors, currentColor) => {
   return colors
