@@ -7,11 +7,9 @@ import {createButtonLoadMoreTemplate} from './components/button-load-more';
 import {generateTasks} from './mock/task';
 import {generateFilters} from './mock/filter.js';
 
-
 const TASKS_COUNT = 23;
 const COUNT_TASKS_AT_FIRST = 8;
 const COUNT_TASKS_LOAD_MORE = 8;
-
 
 const render = (container, template, place = `beforeend`) => {
   container.insertAdjacentHTML(place, template);

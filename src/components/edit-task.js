@@ -1,5 +1,11 @@
-import {Colors, Days, MonthNames} from '../utils/const';
-import {formatTime} from '../utils/format-time';
+import {
+  Colors,
+  Days,
+  MonthNames
+} from '../utils/const';
+import {
+  formatTime
+} from '../utils/format-time';
 
 const createColorsMarkup = (colors, currentColor) => {
   return colors
@@ -71,7 +77,13 @@ const createHashtags = (tags) => {
 };
 
 export const createEditTaskTemplate = (task) => {
-  const {description, tags, dueDate, color, repeatingDays} = task;
+  const {
+    description,
+    tags,
+    dueDate,
+    color,
+    repeatingDays
+  } = task;
 
   const isExpired = dueDate instanceof Date && dueDate < Date.now();
   const isDateShowing = !!dueDate;
@@ -113,9 +125,7 @@ export const createEditTaskTemplate = (task) => {
                   <button class="card__date-deadline-toggle" type="button">
                     date: <span class="card__date-status">${isDateShowing ? `yes` : `no`}</span>
                   </button>
-  
-                  ${isDateShowing ?
-      `<fieldset class="card__date-deadline">
+                      ${isDateShowing ? `<fieldset class="card__date-deadline">
                         <label class="card__input-deadline-wrap">
                           <input
                             class="card__date"
@@ -133,8 +143,7 @@ export const createEditTaskTemplate = (task) => {
                     repeat:<span class="card__repeat-status">${isRepeatingTask ? `yes` : `no`}</span>
                   </button>
   
-                  ${isRepeatingTask ?
-      `<fieldset class="card__repeat-days">
+                  ${isRepeatingTask ? `<fieldset class="card__repeat-days">
                       <div class="card__repeat-days-inner">
                         ${repeatingDaysMarkup}
                       </div>

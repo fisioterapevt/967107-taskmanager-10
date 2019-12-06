@@ -58,5 +58,4 @@ const generateTasks = (count) => {
     .map(generateTask);
 };
 
-
 export {generateTask, generateTasks};
