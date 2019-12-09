@@ -3,7 +3,6 @@ const RenderPosition = {// указывает место вставки конт
   BEFOREEND: `beforeend`
 };
 
-
 const render = (container, element, place) => { // вставляет элемент в указанное место
   switch (place) {
     case RenderPosition.AFTERBEGIN:
@@ -22,10 +21,8 @@ const createElement = (template) => {
   return newElement.firstChild;
 };
 
-
 export {
   RenderPosition,
   render,
   createElement
-
 };

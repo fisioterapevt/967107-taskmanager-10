@@ -1,4 +1,4 @@
-import {createElement} from '../utils/utils';
+import {createElement} from '../utils/elements';
 
 const createNoTasksTemplate = () => {
   return (
@@ -7,7 +7,6 @@ const createNoTasksTemplate = () => {
     </p>`
   );
 };
-
 
 export default class NoTasks {
   constructor() {

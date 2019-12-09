@@ -9,7 +9,7 @@ import ButtonLoadMoreComponent from './components/button-load-more';
 import SortComponent from './components/sort.js';
 import {generateTasks} from './mock/task';
 import {generateFilters} from './mock/filter.js';
-import {render, RenderPosition} from './utils/utils';
+import {render, RenderPosition} from './utils/elements';
 
 const TASKS_COUNT = 23;
 const COUNT_TASKS_AT_FIRST = 8;
@@ -76,7 +76,6 @@ if (isAllTasksArchived) {
       renderTask(taskListElement, task);
     });
 
-  // show first 7 tasks
   const buttonLoadMoreComponent = new ButtonLoadMoreComponent();
 
   render(boardComponent.getElement(), buttonLoadMoreComponent.getElement(), RenderPosition.BEFOREEND);

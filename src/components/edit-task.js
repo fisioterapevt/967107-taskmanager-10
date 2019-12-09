@@ -1,6 +1,6 @@
 import {COLORS, DAYS, MONTH_NAMES} from '../utils/const';
 import {formatTime} from '../utils/format-time';
-import {createElement} from '../utils/utils';
+import {createElement} from '../utils/elements';
 
 const createColorsMarkup = (colors, currentColor) => {
   return colors
