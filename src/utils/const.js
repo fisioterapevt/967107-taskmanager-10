@@ -1,8 +1,8 @@
-export const Colors = [`black`, `yellow`, `blue`, `green`, `pink`];
+export const COLORS = [`black`, `yellow`, `blue`, `green`, `pink`];
 
-export const Days = [`mo`, `tu`, `we`, `th`, `fr`, `sa`, `su`];
+export const DAYS = [`mo`, `tu`, `we`, `th`, `fr`, `sa`, `su`];
 
-export const MonthNames = [
+export const MONTH_NAMES = [
   `January`,
   `February`,
   `March`,
@@ -17,13 +17,13 @@ export const MonthNames = [
   `December`,
 ];
 
-export const DescriptionItems = [
+export const DESCRIPTION_ITEMS = [
   `Изучить теорию`,
   `Сделать домашку`,
   `Пройти интенсив на соточку`,
 ];
 
-export const DefaultRepeatingDays = {
+export const DEFAULT_REPEATING_DAYS = {
   'mo': false,
   'tu': false,
   'we': false,
@@ -33,7 +33,7 @@ export const DefaultRepeatingDays = {
   'su': false,
 };
 
-export const Tags = [
+export const TAGS = [
   `homework`,
   `theory`,
   `practice`,

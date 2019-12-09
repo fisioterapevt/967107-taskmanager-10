@@ -1,5 +1,6 @@
+import {createElement} from '../utils/utils';
 
-export const createHeaderTemplate = () => {
+const createHeaderTemplate = () => {
   return (
     `<section class="control__btn-wrap">
         <input
@@ -31,3 +32,25 @@ export const createHeaderTemplate = () => {
       </section>`
   );
 };
+
+export default class SiteHeader {
+  constructor() {
+    this._element = null;
+  }
+
+  getTemplate() {
+    return createHeaderTemplate();
+  }
+
+  getElement() {
+    if (!this._element) {
+      this._element = createElement(this.getTemplate());
+    }
+
+    return this._element;
+  }
+
+  removeElement() {
+    this._element = null;
+  }
+}
