@@ -1,4 +1,4 @@
-import {Colors, DefaultRepeatingDays, DescriptionItems, Tags} from '../utils/const';
+import {COLORS, DEFAULT_REPEATING_DAYS, DESCRIPTION_ITEMS, TAGS} from '../utils/const';
 
 const getRandomArrayItem = (array) => {
   const randomIndex = getRandomIntegerNumber(0, array.length);
@@ -21,7 +21,7 @@ const getRandomDate = () => {
 };
 
 const generateRepeatingDays = () => {
-  return Object.assign({}, DefaultRepeatingDays, {
+  return Object.assign({}, DEFAULT_REPEATING_DAYS, {
     'mo': Math.random() > 0.5,
     'tu': Math.random() > 0.5,
     'we': Math.random() > 0.5,
@@ -42,11 +42,11 @@ const generateTask = () => {
   const dueDate = Math.random() > 0.5 ? null : getRandomDate();
 
   return {
-    description: getRandomArrayItem(DescriptionItems),
+    description: getRandomArrayItem(DESCRIPTION_ITEMS),
     dueDate,
-    repeatingDays: dueDate ? DefaultRepeatingDays : generateRepeatingDays(),
-    tags: new Set(generateTags(Tags)),
-    color: getRandomArrayItem(Colors),
+    repeatingDays: dueDate ? DEFAULT_REPEATING_DAYS : generateRepeatingDays(),
+    tags: new Set(generateTags(TAGS)),
+    color: getRandomArrayItem(COLORS),
     isFavorite: Math.random() > 0.5,
     isArchive: Math.random() > 0.5,
   };
